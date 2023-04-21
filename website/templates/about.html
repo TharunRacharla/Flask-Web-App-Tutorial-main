@@ -1,0 +1,97 @@
+{% extends "base.html" %} {% block title %}About{% endblock %} {% block content
+    %}
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/about.css') }}">
+
+    <script src="https://kit.fontawesome.com/cf8e2afea6.js" crossorigin="anonymous"></script>    
+    <h1 id="heading" style=" padding:30px;">Our Team</h1>
+
+
+    <div class="container col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="row">
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='/images/tharun.jpeg') }}" class="img"><br>
+                <b class="name">Tharun Racharla</b><br>
+                Student<br><br>
+                He is currently pursuing his degree in Information Technology from RTMNU.
+                <div class="social-menu">
+
+                    <ul>
+                        <li><a href="github.com/TharunRacharla/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/p.mukesh_7/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=" www.linkedin.com/in/tharun-racharla" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.facebook.com/pixel.peeper.5" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='/images/aman.jpeg.jpeg') }}" class="img"><br>
+                <b class="name">Aman Mishra</b><br>
+                Student<br><br>
+                He is currently pursuing his degree in Information Technology from RTMNU.
+                <div class="social-menu">
+
+                    <ul>
+                        <li><a href="https://github.com/sakshi-rah" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://instagram.com/_aman175?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/aman-mishra-915086216" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.facebook.com/sakshi.rahangdale.9699/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            
+            </div>
+            
+            <div class="card" style="margin-left: 100px;">
+                <img src="{{ url_for('static', filename='/images/saurabh.jpeg') }}" class="img"><br>
+                <b class="name">Saurabh Sakharkar</b><br>
+                Student<br><br>
+                He is currently pursuing his degree in Information Technology from RTMNU.
+
+                <div class="social-menu">
+
+                    <ul>
+                        <li><a href="https://github.com/saurabhrs26" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://instagram.com/saurabh.ramesh.sakharkar?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/saurabh-sakharkar-851540212" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.facebook.com/saurabh.rs.2001?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="card" style="margin-left: 210px;">
+                <img src="{{ url_for('static', filename='/images/sakshi.png') }}" class="img"><br>
+                <b class="name">Sakshi Rajurkar</b><br>
+                Student<br><br>
+                She is currently pursuing her degree in Information Technology from RTMNU.
+                <div class="social-menu">
+
+                    <ul>
+                        <li><a href="github.com/sakshirajuriar" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://instagram.com/sakshi_rajurkar09?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=" https://www.linkedin.com/in/sakshi-rajurkar-74499b244" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            
+            </div>
+
+        </div>
+    </div>
+
+    
+    </div>
+</body>
+
+{% endblock %}

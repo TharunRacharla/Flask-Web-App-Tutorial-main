@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<body>
+  <ul>
+      <li style="font-size:20px; font-weight:bold;">Select Date and Time</li>
+  </ul>
+  <form action="{{ url_for('views.predict') }}" method="post">
+      <span><span style="font-weight:bold; margin:20px;">Enter year:<input style="width:80px;" type="number" name="year" 
+          placeholder="year" min="1900" max="2099" required/></span>
+          <p> 
+              <span style="font-weight:bold; padding-left: 10px;">Select a location</span><select name="month" size="1" style="margin-left: 30px;">
+                  <option  selected="" value="1">January
+                  <option  value="2">February
+                  <option  value="3">March
+                  <option  value="4">April
+                  <option  value="5">May
+                  <option  value="6">June
+                  <option  value="7">July
+                  <option  value="8">August
+                  <option  value="9">September
+                  <option  value="10">October
+                  <option  value="11">November
+                  <option  value="12">December
+                  </option></select>
+             <span style="font-weight:bold; padding-left:10px;">Day(1-31):</span><input
+                  style="width:80px;" type="number" name="day" placeholder="day"  min="1" max="31" required/></p>
+          <p> <span style="font-weight:bold; padding-left: 20px;">Time:</span><input style="width:80px;" type="text" name="hour_of_day"
+                  placeholder="time"  min="0" max="24" required/></p>
+          <ul>
+              <li style="font-size:20px; font-weight:bold;">Select Coordinates</li>
+          <p></p><span style="font-weight:bold; padding-left: 10px;">Select a location</span><select name="location" size="1" style="margin-left: 30px;">
+              <option  selected="" value="1">Bengaluru
+              </option></select></ul>
+          <p> <span style="font-weight:bold; padding-left: 20px;">Enter number of sunspots, Rz:</span><input style="width:80px;" type="text" name="rz_12"
+              placeholder="Enter number"  min="0" max="400" required/></p>
+          <p> <span style="font-weight:bold; padding-left: 20px;">Enter interplanetary magnetic field value, IG (12 hr mean):</span><input style="width:80px;" type="text" name="ig_12"
+              placeholder="Enter number"  min="0" max="400" required/></p>
+          <p> <span style="font-weight:bold; padding-left: 20px;">Enter ap_index 3-h mean value:</span><input style="width:80px;" type="text" name="ap_index"
+              placeholder="Enter number"  min="0" max="100" required/></p>
+          <p> <span style="font-weight:bold; padding-left: 20px;">Enter kp_index 3-h mean value:</span><input style="width:80px;" type="text" name="kp_index"
+              placeholder="Enter number"  min="0" max="100" required/></p>
+              <button style="width:100px; margin-left:20px;height: 40px; font-size:18px;"><a href="/predict"></a>predict</button>
+              <span style="margin-left: 15px;"> {{ prediction_text }}</span>                
+              <br/><br/>
+  </form>  
+</body>
+{% endblock %}

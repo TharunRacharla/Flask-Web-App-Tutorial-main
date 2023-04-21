@@ -1,0 +1,124 @@
+#heading {
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(231, 231, 219);
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    display: inline-block;
+    transition: 0.5s ease-in-out;
+    background:rgba(255, 255, 255, 0.25);
+    box-shadow:0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.card:hover {
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px 3px rgb(179, 171, 171);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 3px rgba(95, 94, 94, 0.767);
+    padding: 10px;
+}
+
+.name {
+    font-size: 25px;
+
+}
+
+.social-menu {
+    width: 440px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 11px;
+}
+
+.social-menu ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: flex;
+
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin: 0 7px;
+}
+
+.social-menu ul li .fab {
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3px;
+    color: #000;
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 0 5px 4px rgba(95, 94, 94, 0.767);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #0077b5;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #002E6E;
+}
+
+
+.top-btn{
+    background-color: white;
+    color:#01327c;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 10px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+.top-btn:hover{
+    box-shadow: 0 0 4px 3px black;
+    cursor: pointer;
+}

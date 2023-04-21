@@ -97,6 +97,8 @@ def plot():
             print(output2)
             fig, ax = plt.subplots()
             output2.plot.line()
+            plt.xlabel("Days -->")
+            plt.ylabel("TEC value (10^6e-)")
             tmpfile = BytesIO()
             fig.savefig(tmpfile, format='png')
             encoded = base64.b64encode(tmpfile.getvalue()).decode('utf-8')

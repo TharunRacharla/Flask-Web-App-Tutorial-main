@@ -15,6 +15,7 @@ body{
     background-position: center;
     background-size: cover;
     position: absolute;
+    padding-right: 400px;
 }
 
 .login-form{

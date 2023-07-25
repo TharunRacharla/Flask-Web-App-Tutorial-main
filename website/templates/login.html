@@ -3,31 +3,27 @@
 
 {% block title %}Login{% endblock %} {% block content
 %}
+    <script src="https://kit.fontawesome.com/cf8e2afea6.js" crossorigin="anonymous"></script>
 
-<form method="POST">
-  <h3 align="center">Login</h3>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="Enter email"
-    />
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      name="password"
-      placeholder="Enter password"
-    />
-  </div>
-  <br />
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/sign-up-page.css') }}">
+    <div class="login-page">
+
+        <div class="login-form">
+
+            <h1>Log In Here</h1>
+
+            <!--Login-Form-->
+            <form id="login" method="post" class="input-group">
+
+                <input type="email" name="email" class="input-file" placeholder="Enter user e-mail" required>
+
+                <input type="password" name="password" class="input-file" placeholder="Enter Password" required>
+
+                <button type="submit" class="submit-btn" id="login">Log in</button>
+            </form>
+
+        </div>
+
+    </div>
 
 {% endblock %}

@@ -25,6 +25,7 @@ def home():
 
 #defining the range of input parameters:
 year_range = range(2001, 2031)
+month_range = range(1, 366)
 day_range = range(1, 366)
 hour_range = range(0, 24)
 rz_12_range = range(0, 401)
@@ -37,26 +38,26 @@ kp_index_range = range(0, 101)
 def predict():
     if request.method == 'POST':
         year = request.form['year']
-        day_of_year = month_to_day[(request.form['month'])] + int(request.form['day'])
+        day_of_year = month_to_day[request.form['month']] + int(request.form['day'])
         hour_of_day = int(request.form['hour_of_day'])
         rz_12 = request.form['rz_12']
         ig_12 = request.form['ig_12']
         ap_index = request.form['ap_index']
         kp_index = request.form['kp_index']
-        with open("website\model\TEC_model.pkl", "rb") as file:
+        with open("website\model\TEC_model4.pkl", "rb") as file:
             current_model = pickle.load(file)
         inputs = np.array([[year, day_of_year, hour_of_day, rz_12, ig_12, ap_index, kp_index]])
         inputs = inputs.reshape(1, -1)
         prediction = current_model.predict(inputs) # Passing in variables for prediction
         tec_output = prediction
         tec_input = TECParams(year=year,
-                                   day_of_year=day_of_year,
-                                   hour_of_day=hour_of_day,
-                                   rz_12=rz_12,
-                                   ig_12=ig_12,
-                                   ap_index=ap_index,
-                                   kp_index=kp_index,
-                                   tec_output=tec_output
+                              day_of_year=day_of_year,
+                              hour_of_day=hour_of_day,
+                              rz_12=rz_12,
+                              ig_12=ig_12,
+                              ap_index=ap_index,
+                              kp_index=kp_index,
+                              tec_output=tec_output
                                      )
         db.session.add(tec_input)
         db.session.commit()

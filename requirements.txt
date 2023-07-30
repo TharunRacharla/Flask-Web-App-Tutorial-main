@@ -6,6 +6,7 @@ cycler==0.11.0
 Flask==2.3.2
 Flask-Login==0.6.2
 fonttools==4.41.1
+gunicorn==21.2.0
 importlib-metadata==6.8.0
 importlib-resources==6.0.0
 itsdangerous==2.1.2

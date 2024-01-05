@@ -1,3 +1,5 @@
 .vscode
 website/__pycache__
 website/database.db
+tecnewenv
+website\templates\test.html

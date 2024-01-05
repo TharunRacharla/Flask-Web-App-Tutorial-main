@@ -1,0 +1,2 @@
+website/model/TEC_model4.pkl filter=lfs diff=lfs merge=lfs -text
+website/model/* filter=lfs diff=lfs merge=lfs -text
